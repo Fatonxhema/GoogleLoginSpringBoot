@@ -9,7 +9,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/index.html","/api/v1/current-user-details").permitAll()
+                .antMatchers("/index.html").permitAll()
                 .anyRequest().authenticated()
                 .and().oauth2Login();
 
